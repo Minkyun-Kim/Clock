@@ -43,6 +43,8 @@
         android:layout_centerVertical="true"
         android:layout_toEndOf="@id/hour"
         android:layout_marginStart="5dp"
+        android:paddingBottom="5dp"
+        android:gravity="center"
         android:text=":"
         android:textSize="34sp" />
 
