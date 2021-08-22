@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layout_next_alarm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/display_height"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/text_next_alarm_remain_time"
+            style="@style/displayTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OO시간 후에 알람이 울립니다." />
+
+        <TextView
+            android:id="@+id/text_next_alarm"
+            style="@style/displaySubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8월 20일 (금) 오전 7:00" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height">
+
+        <TextView
+            android:id="@+id/text_title_alarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/side_margin"
+            android:text="Alarm"/>
+        <ImageView
+            android:id="@+id/icon_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_plus"
+            android:layout_marginEnd="@dimen/icon_side_margin"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/icon_more"
+            android:layout_gravity="end"/>
+        <ImageView
+            android:id="@+id/icon_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/side_margin"
+            android:src="@drawable/ic_more"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/alarm_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
