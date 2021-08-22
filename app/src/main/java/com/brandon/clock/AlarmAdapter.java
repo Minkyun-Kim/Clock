@@ -1,2 +1,4 @@
-package com.brandon.clock;public class AlarmAdapter {
+package com.brandon.clock;
+
+public class AlarmAdapter {
 }
