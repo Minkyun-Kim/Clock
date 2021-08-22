@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="itemAlarm">
+        <item name="android:background">@drawable/alarm_item_background</item>
+    </style>
+
+    <style name="displayTitle">
+        <item name="android:textColor">@color/title_color</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="displaySubTitle">
+        <item name="android:textColor">@color/sub_title_color</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>
