@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/display_height"
         android:orientation="vertical"
+        android:layout_margin="@dimen/alarm_item_margin_bottom"
         android:gravity="center">
 
         <TextView

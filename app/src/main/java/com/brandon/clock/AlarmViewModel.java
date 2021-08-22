@@ -1,2 +1,4 @@
-package com.brandon.clock;public class AlarmViewModel {
+package com.brandon.clock;
+
+public class AlarmViewModel {
 }
