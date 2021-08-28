@@ -72,18 +72,18 @@ public class AlarmAdapter extends RecyclerView.Adapter<AlarmAdapter.ViewHolder> 
         public ViewHolder(View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.text_title_alarm);
-            twelveHourClock = itemView.findViewById(R.id.twelve_hour_clock);
-            hour = itemView.findViewById(R.id.hour);
-            minute = itemView.findViewById(R.id.minute);
-            days = itemView.findViewById(R.id.days);
-            monday = itemView.findViewById(R.id.monday);
-            tuesday = itemView.findViewById(R.id.tuesday);
-            wednesday = itemView.findViewById(R.id.wednesday);
-            thursday = itemView.findViewById(R.id.thursday);
-            friday = itemView.findViewById(R.id.friday);
-            saturday = itemView.findViewById(R.id.saturday);
-            sunday = itemView.findViewById(R.id.sunday);
-            onOffSwitch = itemView.findViewById(R.id.alarm_switch);
+            twelveHourClock = itemView.findViewById(R.id.text_meridiem);
+            hour = itemView.findViewById(R.id.text_hour);
+            minute = itemView.findViewById(R.id.text_minute);
+            days = itemView.findViewById(R.id.layout_days);
+            monday = itemView.findViewById(R.id.text_monday);
+            tuesday = itemView.findViewById(R.id.text_tuesday);
+            wednesday = itemView.findViewById(R.id.text_wednesday);
+            thursday = itemView.findViewById(R.id.text_thursday);
+            friday = itemView.findViewById(R.id.text_friday);
+            saturday = itemView.findViewById(R.id.text_saturday);
+            sunday = itemView.findViewById(R.id.text_sunday);
+            onOffSwitch = itemView.findViewById(R.id.switch_alarm);
         }
     }
 }

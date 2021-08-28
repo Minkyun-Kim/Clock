@@ -7,19 +7,20 @@
     android:layout_marginBottom="@dimen/alarm_item_margin_bottom">
 
     <TextView
+        android:id="@+id/text_alarm_item_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/hour"
+        android:layout_alignLeft="@id/text_hour"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="17dp"
         android:textSize="13sp"
         tools:text="title" />
 
     <TextView
-        android:id="@+id/twelve_hour_clock"
+        android:id="@+id/text_meridiem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/hour"
+        android:layout_alignBottom="@id/text_hour"
         android:layout_alignParentStart="true"
         android:layout_marginStart="24dp"
         android:layout_marginBottom="5dp"
@@ -27,21 +28,21 @@
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/hour"
+        android:id="@+id/text_hour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginStart="5dp"
-        android:layout_toEndOf="@id/twelve_hour_clock"
+        android:layout_toEndOf="@id/text_meridiem"
         android:text="7"
         android:textSize="34sp" />
 
     <TextView
-        android:id="@+id/colon"
+        android:id="@+id/text_colon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_toEndOf="@id/hour"
+        android:layout_toEndOf="@id/text_hour"
         android:layout_marginStart="5dp"
         android:paddingBottom="5dp"
         android:gravity="center"
@@ -49,40 +50,40 @@
         android:textSize="34sp" />
 
     <TextView
-        android:id="@+id/minute"
+        android:id="@+id/text_minute"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginStart="5dp"
-        android:layout_toEndOf="@id/colon"
+        android:layout_toEndOf="@id/text_colon"
         android:text="00"
         android:textSize="34sp" />
 
     <LinearLayout
-        android:id="@+id/days"
+        android:id="@+id/layout_days"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/alarm_switch"
+        android:layout_alignBottom="@id/switch_alarm"
         android:layout_marginEnd="15dp"
-        android:layout_toStartOf="@id/alarm_switch"
+        android:layout_toStartOf="@id/switch_alarm"
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/monday"
+            android:id="@+id/text_monday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="월"
             android:textSize="@dimen/day_of_the_week_text_size" />
 
         <TextView
-            android:id="@+id/tuesday"
+            android:id="@+id/text_tuesday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="화"
             android:textSize="@dimen/day_of_the_week_text_size" />
 
         <TextView
-            android:id="@+id/wednesday"
+            android:id="@+id/text_wednesday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="수"
@@ -91,7 +92,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/thursday"
+            android:id="@+id/text_thursday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="목"
@@ -100,7 +101,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/friday"
+            android:id="@+id/text_friday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="금"
@@ -109,22 +110,34 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/saturday"
+            android:id="@+id/text_saturday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="토"
             android:textSize="@dimen/day_of_the_week_text_size" />
 
         <TextView
-            android:id="@+id/sunday"
+            android:id="@+id/text_sunday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="일"
             android:textSize="@dimen/day_of_the_week_text_size" />
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/text_specific_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/switch_alarm"
+        android:layout_marginEnd="15dp"
+        android:layout_toStartOf="@id/switch_alarm"
+        android:visibility="gone"
+        android:textSize="@dimen/day_of_the_week_text_size"
+        android:text="8월 29일 (월)"/>
+
+
     <Switch
-        android:id="@+id/alarm_switch"
+        android:id="@+id/switch_alarm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"

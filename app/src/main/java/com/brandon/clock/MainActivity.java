@@ -5,6 +5,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.GestureDetector;
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ImageView moreImage = findViewById(R.id.icon_more);
+        ImageView moreImage = findViewById(R.id.imageview_option);
         moreImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
         AlarmAdapter adapter = new AlarmAdapter(this);
         alarmPresenter = new AlarmPresenter(this, adapter);
 
-        RecyclerView recyclerView = findViewById(R.id.alarm_list);
+        RecyclerView recyclerView = findViewById(R.id.recyclerview_alarm_list);
         recyclerView.setAdapter(adapter);
     }
 }
