@@ -1,15 +1,21 @@
 package com.brandon.clock;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
 import android.view.GestureDetector;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ActionMenuView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupMenu;
 
 import com.brandon.clock.data.Alarm;
 
@@ -21,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getSupportActionBar().hide();
+
         LinearLayout layoutMain = findViewById(R.id.layout_main);
         layoutMain.setOnTouchListener(new View.OnTouchListener() {
             float prevX;
@@ -48,7 +57,34 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        getSupportActionBar().hide();
+        ImageView moreImage = findViewById(R.id.icon_more);
+        moreImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PopupMenu popupMenu = new PopupMenu(MainActivity.this, moreImage);
+                popupMenu.getMenuInflater().inflate(R.menu.main_menu, popupMenu.getMenu());
+                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        switch (item.getItemId()){
+                            case R.id.menu_set_bedtime:
+                                break;
+                            case R.id.menu_edit:
+                                break;
+                            case R.id.menu_sort:
+                                break;
+                            case R.id.menu_settings:
+                                break;
+                            case R.id.menu_contact_us:
+                                break;
+                        }
+                        return true;
+                    }
+                });
+                popupMenu.show();
+            }
+        });
+
 
         AlarmAdapter adapter = new AlarmAdapter(this);
         alarmPresenter = new AlarmPresenter(this, adapter);

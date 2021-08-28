@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">Clock</string>
+    <string name="app_name">시계</string>
+
+    <string name="setting_bedtime">취침 시간 설정</string>
+    <string name="edit">편집</string>
+    <string name="sort">정렬</string>
+    <string name="settings">설정</string>
+    <string name="contact_us">문의하기</string>
 </resources>
