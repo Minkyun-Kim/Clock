@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        AlarmAdapter adapter = new AlarmAdapter(this);
+        AlarmAdapter adapter = new AlarmAdapter();
         alarmPresenter = new AlarmPresenter(this, adapter);
 
         RecyclerView recyclerView = findViewById(R.id.recyclerview_alarm_list);

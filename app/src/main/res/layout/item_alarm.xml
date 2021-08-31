@@ -133,7 +133,7 @@
         android:layout_toStartOf="@id/switch_alarm"
         android:visibility="gone"
         android:textSize="@dimen/day_of_the_week_text_size"
-        android:text="8월 29일 (월)"/>
+        tools:text="8월 29일 (월)"/>
 
 
     <Switch

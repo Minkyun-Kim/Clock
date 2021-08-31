@@ -3,7 +3,7 @@ package com.brandon.clock.data;
 public class Alarm {
     int hour;
     int minute;
-    boolean twelveHourClock;
+    boolean amOrPm;
     boolean ringOnHoliday;
     String title;
     String sound;
@@ -13,7 +13,7 @@ public class Alarm {
     private Alarm(Builder builder){
         hour = builder.hour;
         minute = builder.minute;
-        twelveHourClock = builder.dayOrNight;
+        amOrPm = builder.amOrPm;
         ringOnHoliday = builder.ringOnHoliday;
         title = builder.title;
         sound = builder.sound;
@@ -29,8 +29,8 @@ public class Alarm {
         return minute;
     }
 
-    public boolean isTwelveHourClock() {
-        return twelveHourClock;
+    public boolean isAmOrPm() {
+        return amOrPm;
     }
 
     public boolean isRingOnHoliday() {
@@ -75,7 +75,7 @@ public class Alarm {
     public static class Builder{
         int hour;
         int minute;
-        boolean dayOrNight;
+        boolean amOrPm;
         boolean ringOnHoliday = true;
         String title = null;
         String sound = null;
@@ -83,10 +83,10 @@ public class Alarm {
         Snooze snooze = new Snooze(false);
 
 
-        public Builder(int hour, int minute, boolean dayOrNight){
+        public Builder(int hour, int minute, boolean amOrPm){
             this.hour = hour;
             this.minute = minute;
-            this.dayOrNight = dayOrNight;
+            this.amOrPm = amOrPm;
         }
 
         public Builder ringOnHoliday(boolean ringOnHoliday){
