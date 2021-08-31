@@ -1,6 +1,5 @@
 package com.brandon.clock;
 
-import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,12 +16,9 @@ import java.util.List;
 
 public class AlarmAdapter extends RecyclerView.Adapter<AlarmAdapter.ViewHolder> {
 
-    Activity activity;
     List<Alarm> alarms = new ArrayList<>();
 
-    public AlarmAdapter(Activity activity) {
-        this.activity = activity;
-
+    public AlarmAdapter() {
         add(new Alarm.Builder(7, 0, true).build());
         add(new Alarm.Builder(8, 0, true).build());
     }
@@ -41,7 +37,7 @@ public class AlarmAdapter extends RecyclerView.Adapter<AlarmAdapter.ViewHolder> 
 
         holder.hour.setText(String.valueOf(alarm.getHour()));
         holder.minute.setText((alarm.getMinute() < 10 ? "0" : "") + alarm.getMinute());
-        holder.twelveHourClock.setText(alarm.isTwelveHourClock() ? "오전" : "오후");
+        holder.twelveHourClock.setText(alarm.isAmOrPm() ? "오전" : "오후");
     }
 
     @Override
