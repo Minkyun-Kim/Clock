@@ -13,4 +13,6 @@
     <dimen name="header_height">64dp</dimen>
     <dimen name="alarm_item_height">112dp</dimen>
     <dimen name="alarm_item_margin_bottom">20dp</dimen>
+
+    <dimen name="edit_alarm_primary_margin">10dp</dimen>
 </resources>
