@@ -15,9 +15,60 @@
     <string name="vibration_title">Vibration</string>
     <string name="repeat_title">Snooze</string>
 
+    <!-- days -->
+    <string name="sunday">Sunday</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+
+    <string name="abbreviation_sunday">Sun</string>
+    <string name="abbreviation_monday">Mon</string>
+    <string name="abbreviation_tuesday">Tue</string>
+    <string name="abbreviation_wednesday">Wed</string>
+    <string name="abbreviation_thursday">Thu</string>
+    <string name="abbreviation_friday">Fri</string>
+    <string name="abbreviation_saturday">Sat</string>
+
+    <string name="capitalized_sunday">S</string>
+    <string name="capitalized_monday">M</string>
+    <string name="capitalized_tuesday">T</string>
+    <string name="capitalized_wednesday">W</string>
+    <string name="capitalized_thursday">T</string>
+    <string name="capitalized_friday">F</string>
+    <string name="capitalized_saturday">S</string>
+
     <!-- common strings -->
     <string name="save">Save</string>
     <string name="cancel">Cancel</string>
     <string name="off">Off</string>
 
+    <!-- ringtone -->
+    <string name="rington_over_the_horizon">Over the Horizon</string>
+    <string name="rington_planet">Planet</string>
+    <string name="rington_pluto">Pluto</string>
+    <string name="rington_polaris">Polaris</string>
+    <string name="rington_puddles">Puddles</string>
+    <string name="rington_quantum_bell">Quantum Bell</string>
+    <string name="rington_satellite">Satellite</string>
+    <string name="rington_shooting_star">Shooting Star</string>
+    <string name="rington_sky_high">Sky High</string>
+    <string name="rington_space_bell">Space Bell</string>
+    <string name="rington_sunlight">Sunlight</string>
+    <string name="rington_synth_bell">Synth Bell</string>
+    <string name="rington_universe_bell">Universe Bell</string>
+
+    <!-- vibration -->
+    <string name="vibration_basic_call">Basic Call</string>
+    <string name="vibration_heart_beat">Heart beat</string>
+    <string name="vibration_ticktock">Ticktock</string>
+    <string name="vibration_waltz">Waltz</string>
+    <string name="vibration_zig_zig_zig">Zig-zig-zig</string>
+    <string name="vibration_off_beat">Off-beat</string>
+    <string name="vibration_spinning">Spinning</string>
+    <string name="vibration_siren">Siren</string>
+    <string name="vibration_telephone">Telephone</string>
+    <string name="vibration_ripple">Ripple</string>
 </resources>
