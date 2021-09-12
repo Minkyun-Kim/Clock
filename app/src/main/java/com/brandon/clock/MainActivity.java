@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.GestureDetector;
@@ -58,6 +59,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        ImageView addAlarmImageView = findViewById(R.id.imageview_plus);
+        addAlarmImageView.setOnClickListener(v -> {
+            Intent intent = new Intent(this, EditAlarmActivity.class);
+            startActivity(intent);
+        });
+
         ImageView moreImage = findViewById(R.id.imageview_option);
         moreImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
-                        switch (item.getItemId()){
+                        switch (item.getItemId()) {
                             case R.id.menu_set_bedtime:
                                 break;
                             case R.id.menu_edit:

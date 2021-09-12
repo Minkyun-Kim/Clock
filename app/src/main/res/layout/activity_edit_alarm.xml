@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
 
     <TimePicker
         android:id="@+id/edit_alarm_time_picker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:timePickerMode="spinner" />
+        android:timePickerMode="spinner"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ScrollView
+        android:id="@+id/edit_alarm_attributes_scroll_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edit_alarm_time_picker">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,123 +34,137 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:text="매주 월,화,수,목,금"/>
+                    tools:text="매주 월,화,수,목,금" />
+
                 <ImageView
                     android:id="@+id/image_calender"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
+                    android:src="@drawable/ic_calendar"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:src="@drawable/ic_calendar"/>
+                    app:layout_constraintTop_toTopOf="parent" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@id/image_calender"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent">
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/image_calender">
 
                     <TextView
                         android:id="@+id/edit_alarm_sunday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="일"/>
+                        android:padding="5dp"
+                        android:text="일" />
+
                     <TextView
                         android:id="@+id/edit_alarm_monday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="월"/>
+                        android:padding="5dp"
+                        android:text="월" />
+
                     <TextView
                         android:id="@+id/edit_alarm_tuesday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="화"/>
+                        android:padding="5dp"
+                        android:text="화" />
+
                     <TextView
                         android:id="@+id/edit_alarm_wednesday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="수"/>
+                        android:padding="5dp"
+                        android:text="수" />
+
                     <TextView
                         android:id="@+id/edit_alarm_thursday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="목"/>
+                        android:padding="5dp"
+                        android:text="목" />
+
                     <TextView
                         android:id="@+id/edit_alarm_friday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="금"/>
+                        android:padding="5dp"
+                        android:text="금" />
+
                     <TextView
                         android:id="@+id/edit_alarm_saturday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="토"/>
+                        android:padding="5dp"
+                        android:text="토" />
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <include
                 android:id="@+id/alarm_attribute_turn_off_on_holiday"
-                layout="@layout/edit_alarm_on_off_template"/>
+                layout="@layout/edit_alarm_on_off_template" />
 
             <EditText
                 android:id="@+id/alarm_attribute_alarm_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:hint="알람 이름"/>
+                android:hint="알람 이름" />
 
             <include
                 android:id="@+id/alarm_attribute_ring_sound"
-                layout="@layout/edit_alarm_on_off_template"/>
+                layout="@layout/edit_alarm_on_off_template" />
+
             <include
                 android:id="@+id/alarm_attribute_vibration"
-                layout="@layout/edit_alarm_on_off_template"/>
+                layout="@layout/edit_alarm_on_off_template" />
+
             <include
                 android:id="@+id/alarm_attribute_repeat"
-                layout="@layout/edit_alarm_on_off_template"/>
+                layout="@layout/edit_alarm_on_off_template" />
         </LinearLayout>
     </ScrollView>
 
     <LinearLayout
+        android:id="@+id/save_cancel_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:gravity="center"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:gravity="center"
-            android:text="Cancel"/>
+            android:text="Cancel" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:gravity="center"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:gravity="center"
-            android:text="Save"/>
+            android:text="Save" />
     </LinearLayout>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
