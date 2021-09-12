@@ -27,7 +27,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp">
+                android:layout_margin="@dimen/edit_alarm_primary_margin">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -125,7 +125,7 @@
                 android:id="@+id/alarm_attribute_alarm_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="@dimen/edit_alarm_primary_margin"
                 android:hint="알람 이름" />
 
             <include
@@ -154,7 +154,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:paddingTop="10dp"
+            android:paddingTop="@dimen/edit_alarm_primary_margin"
             android:paddingBottom="10dp"
             android:text="Cancel" />
 
@@ -163,8 +163,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
+            android:paddingTop="@dimen/edit_alarm_primary_margin"
+            android:paddingBottom="@dimen/edit_alarm_primary_margin"
             android:text="Save" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
